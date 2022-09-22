@@ -1,0 +1,40 @@
+1 QUESTION
+
+
+const object1 = {
+    member: "person1",
+    age:5,
+  };
+      
+  const object2 = {
+    age:5,
+    member: 'ABC'
+  };
+  JSON.stringify(object1) === JSON.stringify(object2)
+  console.log (object1, object2)
+
+2 QUESTION
+
+var request=new XMLHttpRequest
+request.open("GET","https://restcountries.com/v2/all");
+request.send();
+request.onload=function(){
+    var res=JSON.parse(request.response);
+    for (var i=0; i<res.length; i++){
+        console.log(res[i].name, res[i].region, res[i].subregion, res[i].population);
+    }
+   };
+
+
+3 QUESTION
+
+
+var request=new XMLHttpRequest
+request.open("GET","https://restcountries.com/v2/all");
+request.send();
+request.onload=function(){
+    var res=JSON.parse(request.response);
+    for (var i=0; i<res.length; i++){
+        console.log(res[i].flags);
+    }
+   };
